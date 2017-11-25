@@ -3,6 +3,14 @@ version: 1
 runtime: php55
 api_version: 1
 
+env_variables:
+  # Replace USER, PASSWORD, DATABASE, and CONNECTION_NAME with the
+  # values obtained when configuring your Cloud SQL instance.
+  MYSQL_DSN: mysql:unix_socket=/cloudsql/tru-uk-datastore:europe-west2:tru-uk-datastore;dbname=promo
+  MYSQL_USER: root
+  MYSQL_PASSWORD: b*B#67P#J7Sa
+
 handlers:
 - url: /.*
   script: helloworld.php
+
